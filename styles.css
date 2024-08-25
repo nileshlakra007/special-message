@@ -1,3 +1,26 @@
+@media only screen and (max-width: 1024px) {
+    #codeEntry, #hiddenMessage {
+        display: none; /* Hide the main content */
+    }
+
+    body::before {
+        content: "This page is only viewable on a laptop. Please switch to a larger device for the best experience. You can also visit: https://nileshlakra007.github.io/special-message/";
+        display: block;
+        font-size: 1.5em;
+        color: #3e3b36;
+        text-align: center;
+        padding: 20px;
+        margin: 50px;
+    }
+}
+
+/* Media query to ensure content displays on screens larger than 1024px */
+@media only screen and (min-width: 1025px) {
+    body::before {
+        display: none; /* Hide the custom message on larger screens */
+    }
+}
+
 body {
     margin: 0;
     font-family: 'Garamond', serif;  /* Classic serif font */
