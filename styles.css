@@ -1,3 +1,4 @@
+/* Hide content on screens smaller than 1024px and show pop-up */
 @media only screen and (max-width: 1024px) {
     #codeEntry, #hiddenMessage {
         display: none; /* Hide the main content */
@@ -15,6 +16,8 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
+        padding: 20px; /* Add padding to prevent content from touching screen edges */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
     }
 
     /* Style the pop-up box */
@@ -22,10 +25,12 @@
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
-        max-width: 90%;
+        max-width: 100%; /* Ensure the pop-up doesn't exceed the screen width */
+        max-height: 80%; /* Allow some space for scrolling if the content is too long */
         text-align: center;
         font-size: 1.2em;
         color: #3e3b36;
+        overflow-y: auto; /* Enable scrolling if content overflows */
     }
 
     /* Style the message inside the pop-up */
@@ -33,6 +38,7 @@
         color: #b08968;
         text-decoration: none;
         font-weight: bold;
+        word-wrap: break-word; /* Ensure long URLs or text wrap properly */
     }
 }
 
