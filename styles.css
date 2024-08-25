@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Garamond', serif;  /* Classic serif font */
+    background: #f4f1e9;  /* Light parchment background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#codeEntry, #hiddenMessage {
+    background-color: #fff;  /* White background for the "page" */
+    border: 1px solid #d1c7b7;  /* Subtle border like a book page */
+    padding: 40px;  /* Generous padding for a book-like feel */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    max-width: 60%;  /* A narrower width to mimic book pages */
+    max-height: 80%;
+    margin: auto;
+    overflow-y: auto;
+    line-height: 1.8;  /* Comfortable line height */
+    text-align: justify;  /* Justify text like a novel */
+}
+
+input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1em;
+    background-color: #b08968;  /* Warm, bookish button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;  /* Smooth hover transition */
+}
+
+button:hover {
+    background-color: #8f6b58;  /* Slightly darker on hover */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;  /* Decorative header font */
+    color: #3e3b36;
+    margin-bottom: 20px;
+    font-size: 2em;  /* Larger font for a book title feel */
+}
+
+p {
+    color: #3e3b36;  /* Darker text for readability */
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+p:last-child {
+    font-family: 'Garamond', serif;
+    font-size: 1.2em;
+    color: #3e3b36;
+    text-align: right;  /* Align signature to the right */
+    margin-top: 30px;
+}
+
+#hiddenMessage::before, #hiddenMessage::after {
+    content: "❦";  /* Decorative element before and after message */
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    color: #b08968;
+    margin: 20px 0;
+}
