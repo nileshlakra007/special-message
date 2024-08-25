@@ -3,21 +3,43 @@
         display: none; /* Hide the main content */
     }
 
-    body::before {
-        content: "This page is only viewable on a laptop. Please switch to a larger device for the best experience. You can also visit: https://nileshlakra007.github.io/special-message/";
-        display: block;
-        font-size: 1.5em;
-        color: #3e3b36;
-        text-align: center;
+    /* Create a full-screen overlay */
+    #popupMessage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Style the pop-up box */
+    #popupMessageContent {
+        background-color: #fff;
         padding: 20px;
-        margin: 50px;
+        border-radius: 10px;
+        max-width: 90%;
+        text-align: center;
+        font-size: 1.2em;
+        color: #3e3b36;
+    }
+
+    /* Style the message inside the pop-up */
+    #popupMessageContent a {
+        color: #b08968;
+        text-decoration: none;
+        font-weight: bold;
     }
 }
 
-/* Media query to ensure content displays on screens larger than 1024px */
+/* Hide pop-up on screens larger than 1024px */
 @media only screen and (min-width: 1025px) {
-    body::before {
-        display: none; /* Hide the custom message on larger screens */
+    #popupMessage {
+        display: none; /* Hide the pop-up on larger screens */
     }
 }
 
