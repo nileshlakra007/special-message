@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Garamond', serif;  /* Classic serif font */
-    background: #f4f1e9;  /* Light parchment background */
+    font-family: 'Georgia', serif;  /* Elegant serif font */
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);  /* Soft pink to lavender gradient */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,23 +10,25 @@ body {
 }
 
 #codeEntry, #hiddenMessage {
-    background-color: #fff;  /* White background for the "page" */
-    border: 1px solid #d1c7b7;  /* Subtle border like a book page */
-    padding: 40px;  /* Generous padding for a book-like feel */
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    max-width: 60%;  /* A narrower width to mimic book pages */
+    background-color: #ffffff;  /* Soft white background */
+    border-radius: 15px;  /* Rounded corners for a softer look */
+    padding: 50px;  /* Extra padding for a more inviting feel */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);  /* Softer shadow for depth */
+    max-width: 55%;  /* Slightly wider for balance */
     max-height: 80%;
     margin: auto;
     overflow-y: auto;
-    line-height: 1.8;  /* Comfortable line height */
-    text-align: justify;  /* Justify text like a novel */
+    line-height: 1.8;  /* Relaxed line height for readability */
+    color: #4a4a4a;  /* Warm gray text */
+    text-align: left;
 }
 
 input {
     padding: 10px;
     font-size: 1.2em;
-    width: 200px;
-    border: 2px solid #ccc;
+    width: 100%;  /* Input field width adjusts to screen size */
+    box-sizing: border-box;  /* Ensures padding is included in width calculation */
+    border: 2px solid #f7a6b3;  /* Soft pink border for input */
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -35,47 +37,65 @@ button {
     margin-top: 20px;
     padding: 10px 25px;
     font-size: 1em;
-    background-color: #b08968;  /* Warm, bookish button color */
+    background-color: #ff6f91;  /* Warm pink button color */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;  /* Smooth hover transition */
+    transition: all 0.3s ease;
+    width: 100%;  /* Button width adjusts to screen size */
 }
 
 button:hover {
-    background-color: #8f6b58;  /* Slightly darker on hover */
+    background-color: #ff3366;  /* Darker pink on hover */
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;  /* Decorative header font */
-    color: #3e3b36;
+    font-family: 'Playfair Display', serif;  /* Decorative, romantic serif font */
+    color: #333;
     margin-bottom: 20px;
-    font-size: 2em;  /* Larger font for a book title feel */
+    font-size: 2.5em;
 }
 
 p {
-    color: #3e3b36;  /* Darker text for readability */
+    color: #4a4a4a;  /* Warm gray for readability */
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 15px;
     line-height: 1.8;
-    text-align: justify;
+    text-align: left;
 }
 
 p:last-child {
-    font-family: 'Garamond', serif;
-    font-size: 1.2em;
-    color: #3e3b36;
-    text-align: right;  /* Align signature to the right */
+    text-align: right;
     margin-top: 30px;
 }
 
 #hiddenMessage::before, #hiddenMessage::after {
-    content: "❦";  /* Decorative element before and after message */
+    content: "❦";  /* Decorative heart-like symbol */
     display: block;
     text-align: center;
     font-size: 2em;
-    color: #b08968;
+    color: #ff6f91;
     margin: 20px 0;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    #codeEntry, #hiddenMessage {
+        padding: 20px;  /* Reduce padding on smaller screens */
+        font-size: 1em;  /* Slightly smaller font size */
+    }
+
+    h1 {
+        font-size: 2em;  /* Smaller heading size for mobile */
+    }
+
+    button {
+        padding: 10px 20px;  /* Adjust button padding */
+    }
+
+    p {
+        font-size: 1em;  /* Slightly smaller paragraph text */
+    }
 }
