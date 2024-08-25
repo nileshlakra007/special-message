@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const error = document.getElementById("error");
 
     // Set the correct code (the answer to the math problem)
-    const correctCode = "1089"; // Example code, replace with the result of your math problem
+    const correctCode = "6174"; // Example code, replace with the result of your math problem
 
     submitButton.addEventListener("click", function () {
         if (codeInput.value === correctCode) {
